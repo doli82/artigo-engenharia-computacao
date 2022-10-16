@@ -90,8 +90,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 176)
 		(input)
-		(text "/RESET" (rect 0 0 43 19)(font "Intel Clear" (font_size 8)))
-		(text "/RESET" (rect 21 171 64 190)(font "Intel Clear" (font_size 8)))
+		(text "RESET" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "RESET" (rect 21 171 59 190)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 176)(pt 16 176))
 	)
 	(port

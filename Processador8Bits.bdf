@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect -104 272 72 288)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "/RESET" (rect 9 0 47 12)(font "Arial" ))
+	(text "RESET" (rect 9 0 44 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 	(output)
 	(rect 1176 56 1352 72)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "/C" (rect 90 0 101 12)(font "Arial" ))
+	(text "C" (rect 90 0 98 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -66,56 +66,6 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 78 4)(pt 82 8))
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
-	)
-)
-(symbol
-	(rect 280 56 416 184)
-	(text "MemoriaRAM" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "E[7..0]" (rect 0 0 37 19)(font "Intel Clear" (font_size 8)))
-		(text "E[7..0]" (rect 21 27 58 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "D[7..0]" (rect 0 0 40 19)(font "Intel Clear" (font_size 8)))
-		(text "D[7..0]" (rect 21 43 61 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "ES" (rect 0 0 15 19)(font "Intel Clear" (font_size 8)))
-		(text "ES" (rect 21 59 36 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "ES/LE" (rect 0 0 34 19)(font "Intel Clear" (font_size 8)))
-		(text "ES/LE" (rect 21 75 55 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "H" (rect 0 0 9 19)(font "Intel Clear" (font_size 8)))
-		(text "H" (rect 21 91 30 110)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 136 32)
-		(output)
-		(text "S[7..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
-		(text "S[7..0]" (rect 77 27 115 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 32)(pt 120 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 120 112))
 	)
 )
 (symbol
@@ -189,8 +139,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 48)
 		(input)
-		(text "/RESET" (rect 0 0 43 19)(font "Intel Clear" (font_size 8)))
-		(text "/RESET" (rect 21 43 64 62)(font "Intel Clear" (font_size 8)))
+		(text "RESET" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "RESET" (rect 21 43 59 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
@@ -467,8 +417,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 136 48)
 		(output)
-		(text "/C" (rect 0 0 12 19)(font "Intel Clear" (font_size 8)))
-		(text "/C" (rect 103 43 115 62)(font "Intel Clear" (font_size 8)))
+		(text "C" (rect 0 0 8 19)(font "Intel Clear" (font_size 8)))
+		(text "C" (rect 107 43 115 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 136 48)(pt 120 48))
 	)
 	(drawing
@@ -511,6 +461,56 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 80 120))
 	)
 	(rotate270)
+)
+(symbol
+	(rect 280 56 416 184)
+	(text "MemoriaRAM" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
+	(text "8bits_proc_memram" (rect 8 107 105 124)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "E[7..0]" (rect 0 0 37 19)(font "Intel Clear" (font_size 8)))
+		(text "E[7..0]" (rect 21 27 58 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "D[7..0]" (rect 0 0 40 19)(font "Intel Clear" (font_size 8)))
+		(text "D[7..0]" (rect 21 43 61 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "ES" (rect 0 0 15 19)(font "Intel Clear" (font_size 8)))
+		(text "ES" (rect 21 59 36 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "ES/LE" (rect 0 0 34 19)(font "Intel Clear" (font_size 8)))
+		(text "ES/LE" (rect 21 75 55 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "H" (rect 0 0 9 19)(font "Intel Clear" (font_size 8)))
+		(text "H" (rect 21 91 30 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "S[7..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "S[7..0]" (rect 77 27 115 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 32)(pt 120 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 112))
+	)
 )
 (connector
 	(pt 816 376)
