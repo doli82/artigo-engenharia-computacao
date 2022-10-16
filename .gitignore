@@ -1,3 +1,5 @@
 output_files/
 incremental_db/
 db/
+devkits/
+.qsys_edit/
