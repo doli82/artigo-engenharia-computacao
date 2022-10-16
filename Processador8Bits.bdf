@@ -75,15 +75,15 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 32)
 		(input)
-		(text "D[7..0]" (rect 0 0 40 19)(font "Intel Clear" (font_size 8)))
-		(text "D[7..0]" (rect 21 27 61 46)(font "Intel Clear" (font_size 8)))
+		(text "E[7..0]" (rect 0 0 37 19)(font "Intel Clear" (font_size 8)))
+		(text "E[7..0]" (rect 21 27 58 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "E[7..0]" (rect 0 0 37 19)(font "Intel Clear" (font_size 8)))
-		(text "E[7..0]" (rect 21 43 58 62)(font "Intel Clear" (font_size 8)))
+		(text "D[7..0]" (rect 0 0 40 19)(font "Intel Clear" (font_size 8)))
+		(text "D[7..0]" (rect 21 43 61 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
@@ -866,26 +866,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 64 280)
-	(pt 72 280)
-)
-(connector
-	(pt 72 280)
-	(pt 88 280)
-)
-(connector
-	(pt 88 280)
-	(pt 104 280)
-)
-(connector
-	(pt 64 296)
-	(pt 72 296)
-)
-(connector
-	(pt 72 296)
-	(pt 208 296)
-)
-(connector
 	(pt 88 216)
 	(pt 456 216)
 )
@@ -1146,6 +1126,18 @@ https://fpgasoftware.intel.com/eula.
 	(pt 912 256)
 	(bus)
 )
+(connector
+	(pt 72 296)
+	(pt 208 296)
+)
+(connector
+	(pt 72 280)
+	(pt 88 280)
+)
+(connector
+	(pt 88 280)
+	(pt 104 280)
+)
 (junction (pt 808 256))
 (junction (pt 800 256))
 (junction (pt 784 256))
@@ -1165,8 +1157,6 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 88 280))
 (junction (pt 712 432))
 (junction (pt 976 256))
-(junction (pt 72 280))
-(junction (pt 72 296))
 (junction (pt 568 256))
 (junction (pt 552 256))
 (junction (pt 536 256))
