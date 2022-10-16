@@ -22,14 +22,14 @@ https://fpgasoftware.intel.com/eula.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 16 16 152 112)
-	(text "REM - RegistradorDeEnderecoDeMemoria" (rect 5 0 250 19)(font "Intel Clear" (font_size 8)))
+	(text "RDM_RegistradorDeDadosDaMemoria" (rect 5 0 231 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "H" (rect 0 0 9 19)(font "Intel Clear" (font_size 8)))
-		(text "H" (rect 21 27 30 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
+		(text "D[7..0]" (rect 0 0 40 19)(font "Intel Clear" (font_size 8)))
+		(text "D[7..0]" (rect 21 27 61 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 0 48)
@@ -41,9 +41,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 64)
 		(input)
-		(text "D[7..0]" (rect 0 0 40 19)(font "Intel Clear" (font_size 8)))
-		(text "D[7..0]" (rect 21 59 61 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
+		(text "H" (rect 0 0 9 19)(font "Intel Clear" (font_size 8)))
+		(text "H" (rect 21 59 30 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
 	)
 	(port
 		(pt 136 32)

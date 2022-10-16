@@ -22,7 +22,7 @@ https://fpgasoftware.intel.com/eula.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 16 16 152 112)
-	(text "RA - RegistradorA" (rect 5 0 110 19)(font "Intel Clear" (font_size 8)))
+	(text "TMP_RegistradorTemporario" (rect 5 0 177 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
@@ -37,6 +37,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "ES" (rect 0 0 15 19)(font "Intel Clear" (font_size 8)))
 		(text "ES" (rect 21 43 36 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "H" (rect 0 0 9 19)(font "Intel Clear" (font_size 8)))
+		(text "H" (rect 21 59 30 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
 	)
 	(port
 		(pt 136 32)

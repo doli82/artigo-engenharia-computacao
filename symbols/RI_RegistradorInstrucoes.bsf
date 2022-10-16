@@ -22,13 +22,13 @@ https://fpgasoftware.intel.com/eula.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 16 16 152 112)
-	(text "TMP - RegistradorTemporario" (rect 5 0 182 19)(font "Intel Clear" (font_size 8)))
+	(text "RI_RegistradorInstrucoes" (rect 5 0 151 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "D[7..0]" (rect 0 0 40 19)(font "Intel Clear" (font_size 8)))
-		(text "D[7..0]" (rect 21 27 61 46)(font "Intel Clear" (font_size 8)))
+		(text "D[2..0]" (rect 0 0 40 19)(font "Intel Clear" (font_size 8)))
+		(text "D[2..0]" (rect 21 27 61 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
@@ -39,17 +39,10 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
-		(pt 0 64)
-		(input)
-		(text "H" (rect 0 0 9 19)(font "Intel Clear" (font_size 8)))
-		(text "H" (rect 21 59 30 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
 		(pt 136 32)
 		(output)
-		(text "S[7..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
-		(text "S[7..0]" (rect 77 27 115 46)(font "Intel Clear" (font_size 8)))
+		(text "S[2..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "S[2..0]" (rect 77 27 115 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 136 32)(pt 120 32)(line_width 3))
 	)
 	(drawing
