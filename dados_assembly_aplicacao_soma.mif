@@ -18,9 +18,20 @@
 WIDTH=8;
 DEPTH=256;
 
-ADDRESS_RADIX=UNS;
-DATA_RADIX=UNS;
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
 
 CONTENT BEGIN
-	[0..255]  :   0;
+	000  :   02;
+	001  :   2A;
+	002  :   01;
+	003  :   2B;
+	004  :   03;
+	005  :   04;
+	006  :   1C;
+	007  :   05;
+	[008..029]  :   00;
+	02A  :   10;
+	02B  :   0E;
+	[02C..0FF]  :   00;
 END;

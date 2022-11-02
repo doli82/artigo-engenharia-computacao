@@ -38,22 +38,6 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect -216 224 -40 240)
-	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "/CARREGAR" (rect 9 0 75 12)(font "Arial" ))
-	(pt 176 8)
-	(drawing
-		(line (pt 92 12)(pt 117 12))
-		(line (pt 92 4)(pt 117 4))
-		(line (pt 121 8)(pt 176 8))
-		(line (pt 92 12)(pt 92 4))
-		(line (pt 117 4)(pt 121 8))
-		(line (pt 117 12)(pt 121 8))
-	)
-	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-)
-(pin
-	(input)
 	(rect 24 592 200 608)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "EF7" (rect 9 0 29 12)(font "Arial" ))
@@ -310,9 +294,25 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
+	(rect -216 224 -40 240)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "CARREGAR_N" (rect 9 0 85 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
 	(rect -72 312 104 328)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "RESET" (rect 9 0 44 12)(font "Arial" ))
+	(text "RESET_N" (rect 9 0 58 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -326,7 +326,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 528 136 704 152)
+	(rect 536 80 712 96)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "S[7..0]" (rect 90 0 123 12)(font "Arial" ))
 	(pt 0 8)
@@ -341,7 +341,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 144 24 176 40)
+	(rect 136 24 168 40)
 	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
 	(text "inst2" (rect 3 5 26 17)(font "Arial" )(invisible))
 	(port
@@ -1007,16 +1007,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 128 264)
 )
 (connector
-	(pt 128 264)
-	(pt 128 320)
-)
-(connector
-	(text "Q[7..0]" (rect 474 128 505 145)(font "Intel Clear" ))
-	(pt 448 144)
-	(pt 528 144)
-	(bus)
-)
-(connector
 	(pt 352 168)
 	(pt 352 584)
 )
@@ -1271,31 +1261,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 448 168)
 )
 (connector
-	(pt 448 88)
-	(pt 448 104)
-	(bus)
-)
-(connector
-	(pt 448 104)
-	(pt 448 120)
-	(bus)
-)
-(connector
-	(pt 448 120)
-	(pt 448 136)
-	(bus)
-)
-(connector
-	(pt 448 136)
-	(pt 448 144)
-	(bus)
-)
-(connector
-	(pt 448 144)
-	(pt 448 152)
-	(bus)
-)
-(connector
 	(pt 448 152)
 	(pt 448 168)
 	(bus)
@@ -1365,18 +1330,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 664 504)
 )
 (connector
-	(pt 112 248)
-	(pt 168 248)
-)
-(connector
-	(pt 168 216)
-	(pt 160 216)
-)
-(connector
-	(pt 160 216)
-	(pt 160 40)
-)
-(connector
 	(pt -40 88)
 	(pt 168 88)
 )
@@ -1395,10 +1348,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 104 336)
 	(pt 136 336)
-)
-(connector
-	(pt 104 320)
-	(pt 128 320)
 )
 (connector
 	(pt -40 232)
@@ -1460,6 +1409,60 @@ https://fpgasoftware.intel.com/eula.
 	(pt 296 600)
 	(pt 296 712)
 )
+(connector
+	(pt 128 264)
+	(pt 128 320)
+)
+(connector
+	(pt 104 320)
+	(pt 128 320)
+)
+(connector
+	(text "Q[7..0]" (rect 482 72 513 89)(font "Intel Clear" ))
+	(pt 448 88)
+	(pt 536 88)
+	(bus)
+)
+(connector
+	(pt 448 88)
+	(pt 448 104)
+	(bus)
+)
+(connector
+	(pt 448 104)
+	(pt 448 120)
+	(bus)
+)
+(connector
+	(pt 448 120)
+	(pt 448 136)
+	(bus)
+)
+(connector
+	(pt 448 136)
+	(pt 448 152)
+	(bus)
+)
+(connector
+	(pt 128 216)
+	(pt 168 216)
+)
+(connector
+	(pt 128 216)
+	(pt 128 248)
+)
+(connector
+	(pt 112 248)
+	(pt 128 248)
+)
+(connector
+	(pt 152 40)
+	(pt 152 248)
+)
+(connector
+	(pt 152 248)
+	(pt 168 248)
+)
 (junction (pt -24 232))
 (junction (pt 392 88))
 (junction (pt 384 104))
@@ -1470,9 +1473,9 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 448 104))
 (junction (pt 448 120))
 (junction (pt 448 136))
-(junction (pt 448 144))
 (junction (pt 448 152))
 (junction (pt 448 168))
 (junction (pt 344 184))
 (junction (pt 448 184))
 (junction (pt 336 200))
+(junction (pt 448 88))
