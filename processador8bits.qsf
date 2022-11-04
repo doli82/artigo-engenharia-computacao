@@ -37,60 +37,35 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE EP4CE6E22A7
+set_global_assignment -name FAMILY "Cyclone IV GX"
+set_global_assignment -name DEVICE EP4CGX150CF23C7
 set_global_assignment -name TOP_LEVEL_ENTITY Processador
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:02:36  SEPTEMBER 14, 2015"
 set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 125
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.0-V LVTTL"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS 6
 set_global_assignment -name ENABLE_OCT_DONE OFF
 set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
 set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
-set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-set_global_assignment -name EDA_TIME_SCALE "1 us" -section_id eda_simulation
-set_global_assignment -name VECTOR_WAVEFORM_FILE UCWaveform.vwf
-set_global_assignment -name BDF_FILE UC_UnidadeDeControle.bdf
-set_global_assignment -name BDF_FILE PC_ContadorDePrograma.bdf
-set_global_assignment -name MIF_FILE dados_sinais_controle.mif
-set_global_assignment -name MIF_FILE dados_mapeamento_instrucoes.mif
-set_global_assignment -name MIF_FILE dados_assembly_aplicacao_soma.mif
-set_global_assignment -name BDF_FILE ULA_UnidadeLogicaEAritmetica.bdf
-set_global_assignment -name BDF_FILE TMP_RegistradorTemporario.bdf
-set_global_assignment -name BDF_FILE RI_RegistradorInstrucoes.bdf
-set_global_assignment -name BDF_FILE REM_RegistradorDeEnderecoDeMemoria.bdf
-set_global_assignment -name BDF_FILE RDM_RegistradorDeDadosDaMemoria.bdf
-set_global_assignment -name BDF_FILE PCX.bdf
-set_global_assignment -name BDF_FILE RAM_MemoriaRAM.bdf
-set_global_assignment -name BDF_FILE RB_RegistradorB.bdf
-set_global_assignment -name BDF_FILE RA_RegistradorA.bdf
-set_global_assignment -name SDC_FILE Processador8Bits.out.sdc
-set_global_assignment -name VECTOR_WAVEFORM_FILE SomaWaveform.vwf
-set_global_assignment -name BDF_FILE Processador.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE RIWaveform.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE RAWaveform.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE RDMWaveform.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE PC_Waveform.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE RAM_Waveform.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE PCX_Waveform.vwf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
+set_global_assignment -name TRI_STATE_SPI_PINS ON
+set_global_assignment -name FORCE_CONFIGURATION_VCCIO ON
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_20MHZ
 set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[0]
 set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[0]
 set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[1]
@@ -275,4 +250,38 @@ set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_WE_N
 set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_RESET_N
 set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_CK_P
 set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_CK_N
+set_instance_assignment -name IO_STANDARD "2.5 V" -to I_ADDR[15]
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_formal_verification
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/projects/p8b/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name MIF_FILE dados_sinais_controle.mif
+set_global_assignment -name MIF_FILE dados_mapeamento_instrucoes.mif
+set_global_assignment -name MIF_FILE dados_assembly_aplicacao_soma.mif
+set_global_assignment -name BDF_FILE Processador.bdf
+set_global_assignment -name BDF_FILE UC_UnidadeDeControle.bdf
+set_global_assignment -name BDF_FILE PC_ContadorDePrograma.bdf
+set_global_assignment -name BDF_FILE ULA_UnidadeLogicaEAritmetica.bdf
+set_global_assignment -name BDF_FILE TMP_RegistradorTemporario.bdf
+set_global_assignment -name BDF_FILE RI_RegistradorInstrucoes.bdf
+set_global_assignment -name BDF_FILE REM_RegistradorDeEnderecoDeMemoria.bdf
+set_global_assignment -name BDF_FILE RDM_RegistradorDeDadosDaMemoria.bdf
+set_global_assignment -name BDF_FILE PCX.bdf
+set_global_assignment -name BDF_FILE RAM_MemoriaRAM.bdf
+set_global_assignment -name BDF_FILE RB_RegistradorB.bdf
+set_global_assignment -name BDF_FILE RA_RegistradorA.bdf
+set_global_assignment -name SDC_FILE Processador8Bits.out.sdc
+set_global_assignment -name VECTOR_WAVEFORM_FILE SomaWaveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE UC_LD_A_END_Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE UC_LD_B_END_Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE UC_Fase_Busca_Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE RIWaveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE RAWaveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE RDMWaveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE PC_Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE RAM_Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE PCX_Waveform.vwf
+set_global_assignment -name SDC_FILE Processador8Bits.sdc
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

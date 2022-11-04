@@ -22,7 +22,7 @@ https://fpgasoftware.intel.com/eula.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 88 184 264 200)
+	(rect 64 216 240 232)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "ES" (rect 9 0 23 12)(font "Arial" ))
 	(pt 176 8)
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 88 216 264 232)
+	(rect 64 248 240 264)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "H" (rect 9 0 17 12)(font "Arial" ))
 	(pt 176 8)
@@ -70,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 88 200 264 216)
+	(rect 64 232 240 248)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "ES_LE" (rect 9 0 42 12)(font "Arial" ))
 	(pt 176 8)
@@ -138,7 +138,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 48 16)
 		(output)
 		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 13 49 25)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 13 46 25)(font "Courier New" (bold))(invisible))
 		(line (pt 32 16)(pt 48 16))
 	)
 	(drawing
@@ -147,6 +147,21 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 14 25)(pt 32 16))
 	)
 	(flipx)
+)
+(symbol
+	(rect 264 104 296 120)
+	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
+	(text "inst" (rect 3 5 20 17)(font "Arial" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
 )
 (symbol
 	(rect 328 120 520 480)
@@ -306,20 +321,19 @@ https://fpgasoftware.intel.com/eula.
 		(text "rden_a" (rect 24 64 64 78)(font "Arial" (font_size 8)))
 		(text "rden_a" (rect 24 64 64 78)(font "Arial" (font_size 8)))
 		(line (pt 0 72)(pt 16 72))
-		(unused)
 	)
 	(port
 		(pt 192 56)
 		(output)
 		(text "q_a[WIDTH_A-1..0]" (rect 160 49 268 63)(font "Arial" (font_size 8)))
-		(text "q_a[]" (rect 148 49 176 63)(font "Arial" (font_size 8)))
+		(text "q_a[]" (rect 148 49 171 63)(font "Arial" (font_size 8)))
 		(line (pt 176 56)(pt 192 56)(line_width 3))
 	)
 	(port
 		(pt 192 80)
 		(output)
 		(text "q_b[WIDTH_B-1..0]" (rect 144 72 251 86)(font "Arial" (font_size 8)))
-		(text "q_b[]" (rect 148 72 176 86)(font "Arial" (font_size 8)))
+		(text "q_b[]" (rect 148 72 171 86)(font "Arial" (font_size 8)))
 		(line (pt 192 80)(pt 176 80)(line_width 3))
 		(unused)
 	)
@@ -327,7 +341,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 192 104)
 		(output)
 		(text "eccstatus[2..0]" (rect 142 96 226 110)(font "Arial" (font_size 8)))
-		(text "eccstatus[]" (rect 118 96 181 110)(font "Arial" (font_size 8)))
+		(text "eccstatus[]" (rect 118 96 171 110)(font "Arial" (font_size 8)))
 		(line (pt 192 104)(pt 176 104)(color 128 0 255)(line_width 3))
 		(unused)
 	)
@@ -521,31 +535,31 @@ https://fpgasoftware.intel.com/eula.
 		(type "PARAMETER_STRING")	)
 	(parameter
 		"CLOCK_ENABLE_INPUT_A"
-		"NORMAL"
+		"BYPASS"
 		"Should clock enable be used on the Input registers of port A? Values are \"NORMAL\"(default), \"ALTERNATE\" and \"BYPASS\""
 		"\"NORMAL\"" "\"BYPASS\"" 
 		(type "PARAMETER_STRING")	)
 	(parameter
 		"CLOCK_ENABLE_OUTPUT_A"
-		"NORMAL"
+		"BYPASS"
 		"Should clock enable be used on the Output registers of port A? Values are \"NORMAL\"(default) and \"BYPASS\""
 		"\"NORMAL\"" "\"BYPASS\"" 
 		(type "PARAMETER_STRING")	)
 	(parameter
 		"CLOCK_ENABLE_INPUT_B"
-		"BYPASS"
+		"NORMAL"
 		"Should clock enable be used on the Input registers of port B? Values are \"NORMAL\"(default), \"ALTERNATE\" and \"BYPASS\""
 		"\"NORMAL\"" "\"BYPASS\"" 
 		(type "PARAMETER_STRING")	)
 	(parameter
 		"CLOCK_ENABLE_OUTPUT_B"
-		"BYPASS"
+		"NORMAL"
 		"Should clock enable be used on the Output registers of port B? Values are \"NORMAL\"(default) and \"BYPASS\""
 		"\"NORMAL\"" "\"BYPASS\"" 
 		(type "PARAMETER_STRING")	)
 	(parameter
 		"CLOCK_ENABLE_CORE_A"
-		"USE_INPUT_CLKEN"
+		"BYPASS"
 		"Should clock enable be used on core of A? Choices are \"USE_INPUT_CLKEN\", \"NORMAL\", \"BYPASS\" and \"ALTERNATE\""
 		(type "PARAMETER_STRING")	)
 	(parameter
@@ -577,10 +591,6 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (parameter)(rect 520 -704 995 113))
 )
 (connector
-	(pt 328 368)
-	(pt 312 368)
-)
-(connector
 	(text "Q[7..0]" (rect 530 160 561 177)(font "Intel Clear" ))
 	(pt 520 176)
 	(pt 584 176)
@@ -592,32 +602,8 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 312 368)
-	(pt 312 192)
-)
-(connector
-	(pt 296 224)
-	(pt 296 488)
-)
-(connector
-	(pt 608 488)
-	(pt 296 488)
-)
-(connector
 	(pt 608 192)
 	(pt 608 488)
-)
-(connector
-	(pt 264 224)
-	(pt 296 224)
-)
-(connector
-	(pt 312 192)
-	(pt 264 192)
-)
-(connector
-	(pt 328 208)
-	(pt 264 208)
 )
 (connector
 	(text "S[7..0]" (rect 650 160 679 177)(font "Intel Clear" ))
@@ -639,4 +625,48 @@ https://fpgasoftware.intel.com/eula.
 	(pt 304 144)
 	(pt 264 144)
 	(bus)
+)
+(connector
+	(pt 608 488)
+	(pt 272 488)
+)
+(connector
+	(pt 328 208)
+	(pt 296 208)
+)
+(connector
+	(pt 296 208)
+	(pt 296 240)
+)
+(connector
+	(pt 328 368)
+	(pt 288 368)
+)
+(connector
+	(pt 272 488)
+	(pt 272 256)
+)
+(connector
+	(pt 240 240)
+	(pt 296 240)
+)
+(connector
+	(pt 288 368)
+	(pt 288 224)
+)
+(connector
+	(pt 240 224)
+	(pt 288 224)
+)
+(connector
+	(pt 240 256)
+	(pt 272 256)
+)
+(connector
+	(pt 280 120)
+	(pt 280 192)
+)
+(connector
+	(pt 280 192)
+	(pt 328 192)
 )

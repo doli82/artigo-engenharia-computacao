@@ -24,6 +24,8 @@ quit -f
 
 
 
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -42,6 +44,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 
 
 
@@ -211,8 +215,8 @@ TRANSITION_LIST("RI_ES")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 110.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 110.0;
@@ -252,7 +256,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "RI_D";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
 	CHILDREN = 1, 2, 3;
@@ -262,7 +266,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "RI_D[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 1;
 	TREE_LEVEL = 1;
 	PARENT = 0;
@@ -272,7 +276,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "RI_D[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 2;
 	TREE_LEVEL = 1;
 	PARENT = 0;
@@ -282,7 +286,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "RI_D[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 3;
 	TREE_LEVEL = 1;
 	PARENT = 0;
@@ -301,7 +305,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "RI_S";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 5;
 	TREE_LEVEL = 0;
 	CHILDREN = 6, 7, 8;
@@ -311,7 +315,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "RI_S[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
 	PARENT = 5;
@@ -321,7 +325,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "RI_S[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
 	PARENT = 5;
@@ -331,7 +335,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "RI_S[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
 	PARENT = 5;
